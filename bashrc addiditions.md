@@ -2,7 +2,7 @@
 
 ## Add git branch to path display and put prompt on second line
 
-Append the following to the end of your existing bashrc file. Make sure to comment out the existing PS1 line!
+Append the following to the end of your existing bashrc file.
 ```
 function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
