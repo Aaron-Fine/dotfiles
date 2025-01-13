@@ -20,7 +20,7 @@ PS1="$GREEN\u@\h$NO_COLOR:$BLUE\w$YELLOW\$(parse_git_branch)$NO_COLOR\n\$ "
 ## Make less have automatic syntax highlighting and other features
 ```
 # if https://github.com/Textualize/rich-cli is installed...
-if hash rich 2>/dev/null;
+if command -v rich 2>&1 >/dev/null;
 then
     export LESSOPEN="|rich --force-terminal  %s"
     export LESS="--RAW-CONTROL-CHARS"
